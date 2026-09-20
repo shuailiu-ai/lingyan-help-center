@@ -1,5 +1,5 @@
 {
-  "title": "浏览器插件",
+  "title": "安装灵研插件",
   "defaultOpen": true,
-  "pages": ["install", "chrome", "edge", "manual-install", "update"]
+  "pages": ["chrome", "edge", "manual-install"]
 }

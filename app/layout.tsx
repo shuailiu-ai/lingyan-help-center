@@ -59,6 +59,10 @@ export default function Layout({ children }: LayoutProps<'/'>) {
               'Open Sidebar(sidebar)(aria-label)': '打开侧栏',
               'Close Sidebar(sidebar)(aria-label)': '关闭侧栏',
               'Collapse Sidebar(sidebar)(aria-label)': '收起侧栏',
+              'Show Sidebar(sidebar)': '显示侧栏',
+              'Hide Sidebar(sidebar)': '隐藏侧栏',
+              'Open Sidebar(aria-label)': '打开侧栏',
+              'Close Sidebar(aria-label)': '关闭侧栏',
             },
           }}
         >

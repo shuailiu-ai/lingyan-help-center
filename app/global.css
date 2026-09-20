@@ -3,13 +3,13 @@
 @import 'fumadocs-ui/css/preset.css';
 
 :root {
-  --color-fd-primary: hsl(228 84% 58%);
-  --color-fd-ring: hsl(228 84% 58%);
+  --color-fd-primary: hsl(228 74% 54%);
+  --color-fd-ring: hsl(228 74% 54%);
 }
 
 .dark {
-  --color-fd-primary: hsl(225 94% 72%);
-  --color-fd-ring: hsl(225 94% 72%);
+  --color-fd-primary: hsl(225 90% 72%);
+  --color-fd-ring: hsl(225 90% 72%);
 }
 
 html {
@@ -17,8 +17,93 @@ html {
 }
 
 body {
-  font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "HarmonyOS Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
   letter-spacing: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#nd-page[data-full='false'] {
+  max-width: 980px;
+}
+
+#nd-page .prose {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+#nd-page .prose :where(h2) {
+  margin-top: 2.25em;
+}
+
+#nd-page .prose :where(h3) {
+  margin-top: 1.75em;
+}
+
+#nd-page .docs-page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+#nd-page .docs-page-footer > a {
+  width: auto;
+  min-width: 0;
+  max-width: 48%;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  border: 0;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--color-fd-foreground) 6%, transparent);
+  padding: 0.5rem 0.75rem;
+}
+
+#nd-page .docs-page-footer > a:hover {
+  background: color-mix(in srgb, var(--color-fd-foreground) 10%, transparent);
+}
+
+#nd-page .docs-page-footer > a:last-child {
+  margin-left: auto;
+}
+
+#nd-page .docs-page-footer > a > div {
+  min-width: 0;
+}
+
+#nd-page .docs-page-footer > a > div > p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#nd-page .docs-page-footer > a > p:last-child {
+  display: none;
+}
+
+#nd-sidebar button[aria-expanded],
+#nd-mobile-sidebar button[aria-expanded] {
+  color: var(--color-fd-foreground);
+  font-weight: 600;
+}
+
+#nd-sidebar div[id^='base-ui-'][data-open] > a,
+#nd-mobile-sidebar div[id^='base-ui-'][data-open] > a {
+  width: calc(100% - 0.375rem);
+  margin-inline-start: 0.375rem;
+  font-size: 0.84375rem;
+}
+
+#nd-sidebar a[class~='text-fd-primary'],
+#nd-mobile-sidebar a[class~='text-fd-primary'] {
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-fd-primary) 10%, transparent);
+  font-weight: 600;
+  box-shadow: inset 2px 0 0 var(--color-fd-primary);
 }
 
 [data-card] {

@@ -1,4 +1,4 @@
 {
-  "title": "灵研AI 帮助中心",
-  "pages": ["index", "getting-started", "plugin", "features", "faq"]
+  "title": "灵研帮助中心",
+  "pages": ["!index", "plugin", "features", "web", "faq"]
 }

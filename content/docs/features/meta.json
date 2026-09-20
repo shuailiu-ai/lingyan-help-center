@@ -1,4 +1,5 @@
 {
-  "title": "功能教程",
+  "title": "浏览器插件功能",
+  "defaultOpen": true,
   "pages": ["literature-tags", "selection-translation", "ai-inbox"]
 }

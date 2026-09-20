@@ -1,4 +1,4 @@
-export const appName = '灵研AI 帮助中心';
+export const appName = '灵研帮助中心';
 
 export const appDescription =
   '灵研 AI 产品帮助中心，提供浏览器插件安装、功能使用与常见问题指南。';

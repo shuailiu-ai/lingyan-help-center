@@ -1,25 +1,21 @@
 ---
 title: 手动安装灵研 AI 浏览器插件
 description: 无法使用 Chrome 或 Edge 插件商店时，通过扩展程序页面手动安装灵研 AI。
-order: 4
+order: 3
 seoTitle: 手动安装灵研 AI 浏览器插件
 seoDescription: 通过 Chrome 或 Edge 的扩展程序管理页面，手动安装灵研 AI 浏览器插件。
 ---
-
-import { Download } from 'lucide-react';
 
 如果无法通过 Chrome 或 Edge 插件商店安装，可以下载安装包，通过浏览器的扩展程序功能手动安装。
 
 整个过程约 **2 分钟**。
 
-<Cards className="grid-cols-1">
-  <Card
-    icon={<Download />}
-    title="下载安装包（占位）"
-    description="正式安装包发布后，将在这里提供下载。"
-    href="#download-placeholder"
-  />
-</Cards>
+<ActionButton
+  href="/downloads/lingyan-ai-browser-extension.zip"
+  download="灵研AI浏览器插件.zip"
+>
+  下载安装包
+</ActionButton>
 
 <Callout type="info" title="开始前请注意">
   手动安装后，请保留解压后的插件文件夹。移动或删除该文件夹可能导致插件失效。
@@ -31,7 +27,7 @@ import { Download } from 'lucide-react';
 
 ## 下载安装包
 
-点击页面顶部的“下载安装包”。第一阶段该链接为占位，正式安装包会在发布后补充。
+点击页面顶部的“下载安装包”，浏览器会自动下载 ZIP 文件。
 
 </Step>
 
@@ -82,17 +78,9 @@ edge://extensions/
 
 <Step>
 
-## 点击“加载已解压的扩展程序”
+## 加载已解压的扩展程序
 
-开启开发者模式后，点击页面上方出现的“加载已解压的扩展程序”按钮。
-
-</Step>
-
-<Step>
-
-## 选择解压后的插件文件夹
-
-在文件选择窗口中，选择刚才解压得到的插件文件夹，然后确认。
+开启开发者模式后，点击页面上方出现的“加载已解压的扩展程序”按钮。在文件选择窗口中选择刚才解压得到的插件文件夹，然后确认。
 
 <Callout type="warn" title="不要选择 ZIP 文件">
   浏览器需要读取解压后的完整文件夹，不能直接选择下载的 ZIP 压缩包。
@@ -109,9 +97,3 @@ edge://extensions/
 </Step>
 
 </Steps>
-
-## 安装后没有看到图标？
-
-查看[插件图标不显示](/docs/faq/plugin-icon-missing)中的排查方法。
-
-<span id="download-placeholder" />

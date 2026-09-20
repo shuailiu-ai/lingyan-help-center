@@ -1,0 +1,16 @@
+{
+  "title": "灵研 AI 网页版功能",
+  "defaultOpen": true,
+  "pages": [
+    "literature-search",
+    "ai-reading",
+    "proposal",
+    "citation-search",
+    "citation-check",
+    "scientific-drawing",
+    "rewrite",
+    "my-papers",
+    "conference-library",
+    "literature-tracking"
+  ]
+}

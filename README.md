@@ -1,4 +1,4 @@
-# 灵研AI 帮助中心
+# 灵研帮助中心
 
 灵研 AI 的产品帮助文档与教程网站。项目基于 Next.js、TypeScript、Fumadocs 和 MDX，内容面向科研用户，通过 Markdown 文件维护。
 
@@ -69,7 +69,25 @@ order: 6
 在扩展程序页面确认插件已启用。
 ```
 
-需要组件时，将扩展名改为 `.mdx`。项目已全局提供 `Card`、`Cards`、`Callout`、`Steps`、`Step`、`Tabs` 和 `Tab` 等 Fumadocs 组件。
+需要组件时，将扩展名改为 `.mdx`。项目已全局提供 `Card`、`Cards`、`Callout`、`Steps`、`Step`、`Tabs`、`Tab` 和 `ActionButton` 等组件。
+
+需要添加主要操作按钮时，统一使用 `ActionButton`：
+
+```mdx
+<ActionButton href="https://example.com">
+  打开功能
+</ActionButton>
+```
+
+需要触发站内文件下载时，可以传入 `download`：
+
+```mdx
+<ActionButton href="/downloads/lingyan-ai-browser-extension.zip" download="灵研AI浏览器插件.zip">
+  下载安装包
+</ActionButton>
+```
+
+浏览器插件安装包固定存放在 `public/downloads/lingyan-ai-browser-extension.zip`。发布新版本时直接替换这个同名文件，页面链接无需修改。
 
 文件路径会生成对应路由：
 
@@ -84,8 +102,9 @@ content/docs/plugin/troubleshooting.md
 
 ```json
 {
-  "title": "浏览器插件",
-  "pages": ["install", "chrome", "edge", "manual-install", "update"]
+  "title": "安装灵研插件",
+  "defaultOpen": true,
+  "pages": ["chrome", "edge", "manual-install"]
 }
 ```
 
