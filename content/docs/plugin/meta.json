@@ -1,0 +1,5 @@
+{
+  "title": "浏览器插件",
+  "defaultOpen": true,
+  "pages": ["install", "chrome", "edge", "manual-install", "update"]
+}

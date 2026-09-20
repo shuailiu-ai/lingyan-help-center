@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+:root {
+  --color-fd-primary: hsl(228 84% 58%);
+  --color-fd-ring: hsl(228 84% 58%);
+}
+
+.dark {
+  --color-fd-primary: hsl(225 94% 72%);
+  --color-fd-ring: hsl(225 94% 72%);
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  letter-spacing: 0;
+}
+
+[data-card] {
+  border-radius: 8px;
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
