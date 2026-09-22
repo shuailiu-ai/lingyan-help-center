@@ -1,47 +1,34 @@
 ---
 title: 手动安装灵研 AI 浏览器插件
-description: 无法使用 Chrome 或 Edge 插件商店时，通过扩展程序页面手动安装灵研 AI。
+description: 下载并解压灵研 AI 插件安装包，通过浏览器扩展程序页面手动加载，并固定插件图标。
 order: 3
 seoTitle: 手动安装灵研 AI 浏览器插件
 seoDescription: 通过 Chrome 或 Edge 的扩展程序管理页面，手动安装灵研 AI 浏览器插件。
 ---
 
-如果无法通过 Chrome 或 Edge 插件商店安装，可以下载安装包，通过浏览器的扩展程序功能手动安装。
+如果无法通过插件商店安装，可以下载安装包，再通过浏览器的扩展程序页面手动加载。以下截图以 Chrome 为例。
 
-整个过程约 **2 分钟**。
+## 1. 下载并解压安装包
 
-<ActionButton
-  href="/downloads/lingyan-ai-browser-extension.zip"
-  download="灵研AI浏览器插件.zip"
->
-  下载安装包
+打开灵研 AI 下载页面，获取浏览器插件的 ZIP 安装包。
+
+<ActionButton href="https://www.lingyansci.com/welcome/home">
+  前往下载页面
 </ActionButton>
 
-<Callout type="info" title="开始前请注意">
-  手动安装后，请保留解压后的插件文件夹。移动或删除该文件夹可能导致插件失效。
+下载完成后，解压 ZIP 文件，将插件文件夹放在便于保留的位置。
+
+<Callout type="info" title="请保留解压后的文件夹">
+  手动安装后，浏览器仍需读取这个文件夹。请不要移动或删除它，以免插件失效。
 </Callout>
 
-<Steps>
+## 2. 打开扩展程序管理页面
 
-<Step>
+在 Chrome 右上角点击“更多”（三个点），依次选择“扩展程序”→“管理扩展程序”。
 
-## 下载安装包
+![在 Chrome 更多菜单中选择扩展程序，再点击管理扩展程序](/images/plugin/manual-install/open-extensions.png)
 
-点击页面顶部的“下载安装包”，浏览器会自动下载 ZIP 文件。
-
-</Step>
-
-<Step>
-
-## 解压 ZIP 文件
-
-下载完成后解压 ZIP 文件，并将解压后的文件夹放在不容易误删的位置。
-
-</Step>
-
-<Step>
-
-## 打开浏览器扩展程序页面
+也可以复制下方对应浏览器的地址，粘贴到地址栏后按回车。代码块右上角提供复制按钮。
 
 <Tabs items={['Chrome', 'Edge']}>
   <Tab value="Chrome">
@@ -64,36 +51,34 @@ edge://extensions/
   </Tab>
 </Tabs>
 
-代码块右上角提供复制按钮。
+## 3. 开启开发者模式
 
-</Step>
+在 Chrome 扩展程序页面右上角，打开“开发者模式”开关。
 
-<Step>
+![Chrome 扩展程序页面右上角的开发者模式开关](/images/plugin/manual-install/developer-mode.png)
 
-## 开启开发者模式
+开启后，页面上方会出现“加载未打包的扩展程序”等按钮。
 
-在扩展程序页面找到“开发者模式”开关并开启。Chrome 通常位于右上角，Edge 通常位于左侧栏。
+![开启开发者模式后显示加载未打包的扩展程序按钮](/images/plugin/manual-install/developer-mode-enabled.png)
 
-</Step>
+## 4. 加载插件文件夹
 
-<Step>
+点击“加载未打包的扩展程序”（部分浏览器版本显示为“加载已解压的扩展程序”）。在弹出的窗口中，选择第 1 步解压得到的插件文件夹，再点击“选择”。
 
-## 加载已解压的扩展程序
+需要选择包含 `manifest.json` 的文件夹，不要选择 ZIP 压缩包，也不要单独选择文件夹里的某个文件。
 
-开启开发者模式后，点击页面上方出现的“加载已解压的扩展程序”按钮。在文件选择窗口中选择刚才解压得到的插件文件夹，然后确认。
+![选择解压后包含 manifest.json 的插件文件夹，并点击选择](/images/plugin/manual-install/select-folder.png)
 
-<Callout type="warn" title="不要选择 ZIP 文件">
-  浏览器需要读取解压后的完整文件夹，不能直接选择下载的 ZIP 压缩包。
-</Callout>
+加载完成后，扩展程序列表中会出现“灵研AI - 科研人专属的 AI 助手”卡片，开关处于开启状态。
 
-</Step>
+![灵研 AI 插件已出现在扩展程序列表中，且处于开启状态](/images/plugin/manual-install/installed.png)
 
-<Step>
+## 5. 将插件固定到工具栏
 
-## 安装完成
+点击 Chrome 右上角的“扩展程序”（拼图）图标，找到灵研 AI，再点击右侧的图钉按钮。
 
-扩展程序列表出现“灵研 AI”即表示安装成功。建议在浏览器扩展程序菜单中固定图标，方便后续使用。
+![在扩展程序菜单中点击灵研 AI 右侧的图钉按钮](/images/plugin/manual-install/pin-extension.png)
 
-</Step>
+固定后，地址栏右侧的工具栏中会显示灵研 AI 图标，安装完成。
 
-</Steps>
+![手动安装并固定后，灵研 AI 图标显示在 Chrome 工具栏中](/images/plugin/manual-install/pinned.png)
