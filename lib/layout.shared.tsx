@@ -1,13 +1,14 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import Image from 'next/image';
-import { appName } from './site';
+import { appName, withBasePath } from './site';
 
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
       title: (
         <span className="flex items-center gap-2.5">
-          <Image src="/logo.png" alt="灵研 AI" width={28} height={28} priority />
+          {/* Static export serves this file from the Pages base path. next/image leaves that prefix off when unoptimized. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={withBasePath('/logo.png')} alt="灵研 AI" width={28} height={28} />
           <span>{appName}</span>
         </span>
       ),
