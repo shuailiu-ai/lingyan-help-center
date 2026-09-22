@@ -2,8 +2,6 @@
 
 灵研 AI 的产品帮助文档与教程网站。项目基于 Next.js、TypeScript、Fumadocs 和 MDX，内容面向科研用户，通过 Markdown 文件维护。
 
-正式站点发布到 GitHub Pages：<https://shuailiu-ai.github.io/lingyan-help-center/>。推送到 `main` 后，`.github/workflows/pages.yml` 会构建静态文件并部署。仓库的 Pages 来源需要选择 GitHub Actions。
-
 ## Docker 启动
 
 项目根目录执行：
@@ -125,7 +123,7 @@ seoDescription: 可选的 SEO 描述
 canonical: 可选的规范链接
 ```
 
-全站域名由 `NEXT_PUBLIC_SITE_URL` 控制，子路径由 `NEXT_PUBLIC_BASE_PATH` 控制。复制 `.env.example` 为 `.env` 后修改即可。这两项用于 canonical、Open Graph、`robots.txt` 和 `sitemap.xml`。GitHub Pages 项目站点的公开地址是 `https://shuailiu-ai.github.io/lingyan-help-center`，对应子路径 `/lingyan-help-center`。本地 Docker 会把地址覆盖为 `http://localhost:3000`，并清空子路径。
+全站域名由 `NEXT_PUBLIC_SITE_URL` 控制。复制 `.env.example` 为 `.env` 后修改即可。该配置用于 canonical、Open Graph、`robots.txt` 和 `sitemap.xml`，不要在代码中写死部署域名。
 
 ## 修改名称、Logo 与主题
 
@@ -153,4 +151,4 @@ pnpm types:check
 pnpm build
 ```
 
-项目由 Fumadocs 官方脚手架生成，内容源定义在 `lib/source.ts`。站点以静态导出方式构建，搜索索引在构建时写入 `app/api/search`，由浏览器在本地完成检索。`pnpm build` 的产物在 `out/`，GitHub Pages 直接托管这个目录。
+项目由 Fumadocs 官方脚手架生成，内容源定义在 `lib/source.ts`，站内搜索接口位于 `app/api/search/route.ts`。

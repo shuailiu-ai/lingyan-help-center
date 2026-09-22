@@ -11,14 +11,6 @@ if (!configuredSiteUrl) {
 
 export const siteUrl = configuredSiteUrl.replace(/\/$/, '');
 
-export const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? '').replace(/\/$/, '');
-
-export function withBasePath(path: string) {
-  if (!path.startsWith('/') || path.startsWith('//')) return path;
-  if (!basePath || path === basePath || path.startsWith(`${basePath}/`)) return path;
-  return `${basePath}${path}`;
-}
-
 export function absoluteUrl(path = '/') {
   if (/^https?:\/\//.test(path)) return path;
 
