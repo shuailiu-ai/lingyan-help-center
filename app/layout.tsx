@@ -1,6 +1,7 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
 import type { Metadata } from 'next';
+import { StaticSearchDialog } from '@/components/search';
 import { appDescription, appName, siteUrl } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -34,6 +35,9 @@ export default function Layout({ children }: LayoutProps<'/'>) {
     <html lang="zh-CN" suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <RootProvider
+          search={{
+            SearchDialog: StaticSearchDialog,
+          }}
           i18n={{
             locale: 'zh-CN',
             translations: {
